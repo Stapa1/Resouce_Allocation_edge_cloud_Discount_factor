@@ -1,0 +1,151 @@
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Define the discount factor
+discount_factor = 0.5
+
+# Calculate discounted rewards
+def calculate_discounted_rewards(rewards):
+    discounted_rewards = np.zeros_like(rewards)
+    cumulative_reward = 0
+    for t in reversed(range(len(rewards))):
+        cumulative_reward = rewards[t] + discount_factor * cumulative_reward
+        discounted_rewards[t] = cumulative_reward
+    return discounted_rewards
+
+# Example usage
+rewards = [28064,
+28088,
+28109,
+28124,
+27860,
+27933,
+28073,
+28039,
+28050,
+28112,
+28008,
+27984,
+28110,
+28023,
+28076,
+28201,
+28195,
+28150,
+28207,
+28129,
+28223,
+28133,
+28187,
+28220,
+28125,
+28397,
+28256,
+28258,
+28112,
+28266,
+28272,
+28196,
+28260,
+28194,
+28301,
+28297,
+28210,
+28257,
+28238,
+28264,
+28293,
+28317,
+28286,
+28247,
+28279,
+28145,
+28189,
+28433,
+28309,
+28393,
+28278,
+28308,
+28356,
+28428,
+28283,
+28415,
+28395,
+28345,
+28380,
+28379,
+28398,
+28479,
+28360,
+28409,
+28369,
+28468,
+28397,
+28427,
+28389,
+28533,
+28406,
+28358,
+28536,
+28263,
+28471,
+28449,
+28592,
+28406,
+28356,
+28452,
+28420,
+28416,
+28459,
+28567,
+28545,
+28579,
+28612,
+28553,
+28371,
+28535,
+28554,
+28656,
+28548,
+28675,
+28695,
+28444,
+28483,
+28582,
+28538,
+28583,
+28627,
+28656,
+28542,
+28620,
+28554,
+28556,
+28637,
+28586,
+28524,
+28687,
+28582,
+28646,
+28671,
+28551,
+28608,
+28592,
+28580,
+28586,
+28658,
+28679,
+28570,
+28520,
+28575,]
+
+di_rewards = calculate_discounted_rewards(rewards)
+fig_reward = plt.figure()
+plt.plot([i+1 for i in range(123)], di_rewards)
+plt.xlabel("episode")
+plt.ylabel("rewards")
+
+
+
+
+print(di_rewards)
