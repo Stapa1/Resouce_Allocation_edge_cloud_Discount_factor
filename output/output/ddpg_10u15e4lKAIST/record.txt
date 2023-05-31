@@ -1,0 +1,27 @@
+time(s):300
+
+user_number:10
+
+edge_number:15
+
+limit:4
+
+task information:
+req_u2e_size:270000
+process_loading:1080000
+req_e2u_size:96
+
+Episode:  0 Reward:  1206###  r_var: 1.00 b_var: 1.00 
+Episode:  1 Reward:  1222###  r_var: 1.00 b_var: 1.00 
+Episode:  2 Reward:  1203###  r_var: 1.00 b_var: 1.00 
+Episode:  3 Reward:  1192###  r_var: 1.00 b_var: 1.00 
+Episode:  4 Reward:  1191###  r_var: 1.00 b_var: 1.00 
+Episode:  5 Reward:  1192###  r_var: 1.00 b_var: 1.00 
+Episode:  6 Reward:  1204###  r_var: 1.00 b_var: 1.00 
+Episode:  7 Reward:  1203###  r_var: 1.00 b_var: 1.00 
+the mean of the rewards:1196.4
+
+the standard deviation of the rewards:5.817215828899595
+
+the range of the rewards:13
+
